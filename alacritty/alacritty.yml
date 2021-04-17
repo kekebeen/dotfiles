@@ -1,0 +1,68 @@
+# Window Customization
+window:
+  dimensions:
+    columns: 145
+    lines: 38
+  padding:
+    x: 15
+    y: 25
+  decorations: transparent
+scrolling:
+  history: 10000
+  multiplier: 3
+background_opacity: .9
+window.dynamic_title: true
+
+# Font Customization
+font:
+  normal:
+    family: Hasklug Nerd Font Mono
+    style: Regular
+  bold:
+    family: Hasklug Nerd Font Mono
+    style: Bold
+  italic:
+    family: Hasklug Nerd Font Mono
+    style: Italic
+  size: 16
+  offset:
+    x: 0
+    y: 15
+  glyph_offset:
+    x: 0
+    y: 0
+  debug:
+    persistent_logging: false
+  use_thin_strokes: true
+
+# Colors (One Half Light)
+colors:
+  primary:
+    background: '0xfafafa'
+    foreground: '0x383a42'
+
+  normal:
+    black: '0x383a42'
+    red: '0xe45649'
+    green: '0x50a14f'
+    yellow: '0xc18401'
+    blue: '0x0184bc'
+    magenta: '0xa626a4'
+    cyan: '0x0997b3'
+    white: '0xfafafa'
+
+  bright:
+    black: '0x383a42'
+    red: '0xe45649'
+    green: '0x50a14f'
+    yellow: '0xc18401'
+    blue: '0x0184bc'
+    magenta: '0xa626a4'
+    cyan: '0x0997b3'
+    white: '0xfafafa'
+
+
+draw_bold_text_with_bright_colors: false
+
+key_bindings:
+  - { key: N, mods: Super, action: SpawnNewInstance }

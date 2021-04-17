@@ -1,0 +1,141 @@
+{
+  // Telemetry
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+
+  // GIT and fidd
+  "git.enabled": false,
+  "diffEditor.renderSideBySide": false,
+  "scm.diffDecorationsGutterVisibility": "hover",
+  "scm.diffDecorations": "gutter",
+  "git.enableStatusBarSync": false,
+
+  // UI
+  "editor.cursorBlinking": "solid",
+  "editor.selectionHighlight": false,
+  "editor.occurrencesHighlight": false,
+  "editor.matchBrackets": "always",
+  "editor.minimap.enabled": false,
+  "editor.scrollBeyondLastLine": true,
+  "editor.suggestSelection": "first",
+
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "on",
+
+  "workbench.settings.openDefaultKeybindings": true,
+  "editor.insertSpaces": false,
+
+  "explorer.confirmDragAndDrop": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.acceptSuggestionOnEnter": "off",
+
+  "workbench.tree.indent": 20,
+
+  "files.associations": {
+    "*.prisma": "graphql"
+  },
+
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+
+  "emmet.excludeLanguages": ["markdown"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
+  "workbench.editor.showTabs": false,
+
+  // Code formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.requireConfig": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.autoIndent": "full",
+  "files.insertFinalNewline": true,
+
+  // Language specific
+  "[graphql]": {
+    "editor.defaultFormatter": null,
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[javascriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+    }
+  },
+
+  // Minimising visual inputs
+  "workbench.sideBar.location": "right",
+  "explorer.openEditors.visible": 0,
+  "editor.highlightActiveIndentGuide": false,
+  "editor.lineNumbers": "off",
+  "editor.renderLineHighlight": "none",
+  "editor.renderControlCharacters": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.statusBar.visible": true,
+  "window.openFilesInNewWindow": "off",
+
+  // Zen mode
+  "zenMode.fullScreen": false,
+  "zenMode.centerLayout": false,
+  "zenMode.hideActivityBar": true,
+  "zenMode.hideTabs": true,
+  "window.title": "${folderName}",
+
+  // Editor Typography
+  "workbench.fontAliasing": "auto",
+
+  "editor.lineHeight": 35,
+  "editor.letterSpacing": 0,
+  "editor.fontSize": 17,
+  "editor.fontFamily": "iA Writer Duo S, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "400",
+
+  // Editor Suggestions Typography
+  "editor.suggestFontSize": 16,
+  "editor.suggestLineHeight": 28,
+
+  // Terminal Typography
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.fontFamily": "mononoki",
+  "workbench.editor.labelFormat": "short",
+  "breadcrumbs.enabled": true,
+
+  "explorer.autoReveal": true,
+  "workbench.colorTheme": "Nord Light",
+  "workbench.iconTheme": "vscode-seedling-icon-theme",
+  "jestrunner.disableCodeLens": true,
+  "workbench.activityBar.visible": false,
+
+  // Sort json overrides
+  "sortJSON.orderOverride": ["name", "version", "description", "extends"],
+
+  // Override error, warning and info marks in the editor
+  "workbench.colorCustomizations": {
+    "editorError.foreground": "#BF616A",
+    "editorWarning.foreground": "#B48EAD",
+    "editorInfo.foreground": "#8FBCBB"
+  },
+
+  // windi css extension
+  "windicss.sortOnSave": true
+}
