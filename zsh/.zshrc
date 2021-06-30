@@ -5,11 +5,7 @@ export KBUILD_BUILD_USER="ben"
 export KBUILD_BUILD_HOST="F.R.I.D.A.Y."
 
 # export PATH=/usr/local/sbin:$PATH
-
-# user profile
-if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-	source $HOME/.profile
-fi
+export PATH=/usr/local/sbin:$PATH:$HOME/.bin:$PATH
 
 # zplug initialization
 [[ ! -f $ZPLUG_HOME/init.zsh ]] && git clone https://github.com/zplug/zplug $ZPLUG_HOME
@@ -24,7 +20,7 @@ zplug "lib/history",      from:oh-my-zsh
 
 # naisu minimal theme
 MNML_USER_CHAR=$USER
-MNML_INSERT_CHAR='do 🚀'
+MNML_INSERT_CHAR='do 🙊'
 zplug 'subnixr/minimal', use:minimal.zsh, as:theme
 
 # another eyecandy
@@ -48,20 +44,23 @@ if [ "$(uname 2> /dev/null)" != "Darwin" ]; then
 fi
 
 if [ "$(uname 2> /dev/null)" != "Linux" ]; then
-	. $HOME/.asdf/asdf.sh
+  # Not working currently with M1 apple silicon
+  # . $HOME/.asdf/asdf.sh
+
+  # Add homebrew opt installation for apple M1
+  export PATH=/opt/homebrew/bin:$PATH
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if type rg &> /dev/null; then
-  #export FZF_DEFAULT_COMMAND='rg --files'
   export FZF_DEFAULT_COMMAND='rg --files --ignore-case --hidden -g "!{.git,node_modules,vendor}/*"'
   export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4"
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-  # Light theme variant
-  # export BAT_THEME="GitHub"
-  # Dark theme variant
-  export BAT_THEME="ansi-dark"
+  export BAT_THEME="GitHub"
 fi
 
-export PATH="$(yarn global bin):/usr/local/sbin:$PATH:$HOME/.bin"
+# Load nvm
+export NVM_DIR="$HOME/.nvm"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
